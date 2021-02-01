@@ -264,7 +264,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../about/" class="md-tabs__link md-tabs__link--active">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         IDE Integration
       </a>
     </li>
@@ -605,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         About IntelliJ IDEA Plugin
       </a>
     </li>
@@ -713,10 +713,50 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../vscode-plugin/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2" >
+      
+      <label class="md-nav__link" for="nav-5-2">
         VS Code Plugin
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="VS Code Plugin" data-md-level="2">
+        <label class="md-nav__title" for="nav-5-2">
+          <span class="md-nav__icon md-icon"></span>
+          VS Code Plugin
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vscode-djinni/" class="md-nav__link">
+        About VS Code Extension
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vscode-djinni/developer-guide/" class="md-nav__link">
+        Developer Guide
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -859,7 +899,7 @@
                 <h1 id="developer-guide">Developer Guide<a class="headerlink" href="#developer-guide" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>This chapter is only interesting if you intend to make changes to the code of djinni generator</p>
+<p>This chapter is only of interest if you want to make changes to the code of the intellij plugin!</p>
 </div>
 <h2 id="development-basics">Development Basics<a class="headerlink" href="#development-basics" title="Permanent link">&para;</a></h2>
 <h3 id="build">Build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h3>
@@ -874,18 +914,25 @@
 <p>You can find the built plugin package under <code>build/distributions/djinni-intellij-plugin-&lt;version&gt;.zip</code></p>
 <h3 id="adjusting-grammar">Adjusting grammar<a class="headerlink" href="#adjusting-grammar" title="Permanent link">&para;</a></h3>
 <p>The grammar for <code>.djinni</code> files is defined in Backus–Naur form in <code>Djinni.bnf</code></p>
-<p>If you decide to make changes to this file, the following manual steps are required to apply them:
-- <code>Djinni.bnf</code>: 
-    - <kbd>Right-Click</kbd> &gt; <kbd>Generate Parser Code</kbd>
-    - <kbd>Right-Click</kbd> &gt; <kbd>Generate JFlex Lexer</kbd>, in the file dialog click <kbd>Save</kbd> and <kbd>Replace</kbd>
-- <code>_DjinniLexer.flex</code>:
-    - <kbd>Right-Click</kbd> &gt; <kbd>Run JFlex Generator</kbd></p>
+<p>If you decide to make changes to this file, the following manual steps are required to apply them:</p>
+<ul>
+<li><code>Djinni.bnf</code>: <ul>
+<li><kbd>Right-Click</kbd> &gt; <kbd>Generate Parser Code</kbd></li>
+<li><kbd>Right-Click</kbd> &gt; <kbd>Generate JFlex Lexer</kbd>, in the file dialog click <kbd>Save</kbd> and <kbd>Replace</kbd></li>
+</ul>
+</li>
+<li><code>_DjinniLexer.flex</code>:<ul>
+<li><kbd>Right-Click</kbd> &gt; <kbd>Run JFlex Generator</kbd></li>
+</ul>
+</li>
+</ul>
 <h2 id="release-process">Release process<a class="headerlink" href="#release-process" title="Permanent link">&para;</a></h2>
-<p>To release a new plugin version, the following steps must be followed:
-1. Create a new release-tag. Set a meaningful version number and describe what has changed in the new version.
-2. Wait. Github will automatically build the plugin, publish it to the <a href="https://plugins.jetbrains.com/organization/cross-language-cpp">jetbrains marketplace</a> &amp; upload the plugin-artifact to the release.
-3. The update will be verified by Jetbrains within a few days. Then it will be distributed to the users.</p>
-<p>That's it :)</p>
+<p>To release a new plugin version, the following steps must be followed:</p>
+<ol>
+<li>Create a new release-tag on github. Set a meaningful version number and describe what has changed in the new version.</li>
+<li>Wait. Github will automatically build the plugin, publish it to the <a href="https://plugins.jetbrains.com/organization/cross-language-cpp">jetbrains marketplace</a> &amp; upload the plugin-artifact to the release.</li>
+<li>The update will be verified by Jetbrains within a few days. Then it will be distributed to the users.</li>
+</ol>
                 
                   
                     
@@ -894,7 +941,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 23, 2020</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 1, 2021</span>
     
   </small>
 </div>
@@ -918,7 +965,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../about/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -933,13 +980,13 @@
           </a>
         
         
-          <a href="../../vscode-plugin/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../vscode-djinni/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                VS Code Plugin
+                About VS Code Extension
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
