@@ -29,13 +29,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java or Objective-C.">
+        <meta name="description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#.">
       
       
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
@@ -43,10 +43,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
         
       
     
@@ -77,7 +77,7 @@
   <!-- Open graph meta tags -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Djinni - Interface Definition Language (IDL)" />
-  <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java or Objective-C." />
+  <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#." />
   <meta property="og:url" content="None" />
 
 
@@ -86,12 +86,17 @@
   
     
     
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
       
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -105,14 +110,6 @@
       
     </div>
     <div data-md-component="announce">
-      
-        <aside class="md-announce">
-          <div class="md-announce__inner md-grid md-typeset">
-            
-    🚧 We are currently migrating djinni <a href="https://github.com/cross-language-cpp/djinni/issues/17" target="blank">to a new project structure</a>. Be aware that this documentation may not be complete yet!
-
-          </div>
-        </aside>
       
     </div>
     
@@ -142,9 +139,30 @@
         </div>
       </div>
     </div>
-    <div class="md-header__options">
-      
-    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="" type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="" type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -160,7 +178,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
       <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
@@ -229,7 +247,7 @@
   
     <li class="md-tabs__item">
       <a href="../setup/" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v0.3.1</code>
+        Generator <code>v0.5.0</code>
       </a>
     </li>
   
@@ -245,7 +263,7 @@
   
     <li class="md-tabs__item">
       <a href="../../djinni-support-lib/install/" class="md-tabs__link">
-        Support Lib <code>v0.0.1</code>
+        Support Lib <code>v0.1.0</code>
       </a>
     </li>
   
@@ -429,13 +447,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
-        Generator <code>v0.3.1</code>
+        Generator <code>v0.5.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Generator <code>v0.3.1</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v0.5.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v0.3.1</code>
+          Generator <code>v0.5.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -461,6 +479,7 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+      
         
       
       
@@ -475,6 +494,7 @@
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -652,13 +672,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
-        Support Lib <code>v0.0.1</code>
+        Support Lib <code>v0.1.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Support Lib <code>v0.0.1</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Support Lib <code>v0.1.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Support Lib <code>v0.0.1</code>
+          Support Lib <code>v0.1.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -669,6 +689,30 @@
     <li class="md-nav__item">
       <a href="../../djinni-support-lib/install/" class="md-nav__link">
         Installing the Support-Lib
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../djinni-support-lib/developer-guide/" class="md-nav__link">
+        Developer guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../djinni-support-lib/python-support/" class="md-nav__link">
+        Python Support
       </a>
     </li>
   
@@ -715,13 +759,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
       
       <label class="md-nav__link" for="__nav_5_1">
-        IntelliJ IDEA Plugin <code>v0.10.4</code>
+        IntelliJ IDEA Plugin <code>v0.11.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="IntelliJ IDEA Plugin <code>v0.10.4</code>" data-md-level="2">
+      <nav class="md-nav" aria-label="IntelliJ IDEA Plugin <code>v0.11.0</code>" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_1">
           <span class="md-nav__icon md-icon"></span>
-          IntelliJ IDEA Plugin <code>v0.10.4</code>
+          IntelliJ IDEA Plugin <code>v0.11.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -766,13 +810,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
       
       <label class="md-nav__link" for="__nav_5_2">
-        VS Code Extension <code>v1.0.5</code>
+        VS Code Extension <code>v1.1.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="VS Code Extension <code>v1.0.5</code>" data-md-level="2">
+      <nav class="md-nav" aria-label="VS Code Extension <code>v1.1.0</code>" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
-          VS Code Extension <code>v1.0.5</code>
+          VS Code Extension <code>v1.1.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -867,6 +911,7 @@
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -1045,8 +1090,8 @@ my_cpp_interface = interface +c {
     const version: i32 = 1;
 }
 
-# This interface will be implemented in Java and ObjC and can be called from C++.
-my_client_interface = interface +j +o {
+# This interface will be implemented in Java, ObjC, Python and C# and can be called from C++.
+my_client_interface = interface +j +o +p +s {
     log_string(str: string): bool;
 }
 </code></pre></div>
@@ -1065,15 +1110,18 @@ will only be processed once.</p>
 <li>Primitives (<code>i8</code>, <code>i16</code>, <code>i32</code>, <code>i64</code>, <code>f32</code>, <code>f64</code>).</li>
 <li>Strings (<code>string</code>)</li>
 <li>Binary (<code>binary</code>). This is implemented as <code>std::vector&lt;uint8_t&gt;</code> in C++, <code>byte[]</code> in Java,
-   and <code>NSData</code> in Objective-C.</li>
-<li>Date (<code>date</code>).  This is <code>chrono::system_clock::time_point</code> in C++, <code>Date</code> in Java, and
-   <code>NSDate</code> in Objective-C.</li>
-<li>List (<code>list&lt;type&gt;</code>). This is <code>vector&lt;T&gt;</code> in C++, <code>ArrayList</code> in Java, and <code>NSArray</code>
-   in Objective-C. Primitives in a list will be boxed in Java and Objective-C.</li>
-<li>Set (<code>set&lt;type&gt;</code>). This is <code>unordered_set&lt;T&gt;</code> in C++, <code>HashSet</code> in Java, and <code>NSSet</code> in
-   Objective-C. Primitives in a set will be boxed in Java and Objective-C.</li>
-<li>Map (<code>map&lt;typeA, typeB&gt;</code>). This is <code>unordered_map&lt;K, V&gt;</code> in C++, <code>HashMap</code> in Java, and
-   <code>NSDictionary</code> in Objective-C. Primitives in a map will be boxed in Java and Objective-C.</li>
+   <code>NSData</code> in Objective-C, an object supporting the <code>buffer</code> interface in Python, and <code>System.Array&lt;System.Byte&gt;</code> in C#.</li>
+<li>Date (<code>date</code>).  This is <code>chrono::system_clock::time_point</code> in C++, <code>Date</code> in Java,
+   <code>NSDate</code> in Objective-C, <code>datetime.datetime</code> in Python, and <code>System.DateTime</code> in C#.</li>
+<li>List (<code>list&lt;type&gt;</code>). This is <code>vector&lt;T&gt;</code> in C++, <code>ArrayList</code> in Java, <code>NSArray</code>
+   in Objective-C, <code>List</code> in Python, and <code>System.Collections.Generic.List</code> in C#. 
+   Primitives in a list will be boxed in Java and Objective-C.</li>
+<li>Set (<code>set&lt;type&gt;</code>). This is <code>unordered_set&lt;T&gt;</code> in C++, <code>HashSet</code> in Java, <code>NSSet</code> in
+   Objective-C, <code>Set</code> in Python, and <code>System.Collections.Generic.HashSet</code> in C#. 
+   Primitives in a set will be boxed in Java and Objective-C.</li>
+<li>Map (<code>map&lt;typeA, typeB&gt;</code>). This is <code>unordered_map&lt;K, V&gt;</code> in C++, <code>HashMap</code> in Java, 
+   <code>NSDictionary</code> in Objective-C, <code>Dictionary</code> in Python, and <code>System.Collections.Generic.Dictionary</code> in C#. 
+   Primitives in a map will be boxed in Java and Objective-C.</li>
 <li>Enumerations / Flags</li>
 <li>Optionals (<code>optional&lt;typeA&gt;</code>). This is <code>std::experimental::optional&lt;T&gt;</code> in C++11, object /
    boxed primitive reference in Java (which can be <code>null</code>), and object / NSNumber strong
@@ -1084,12 +1132,13 @@ will only be processed once.</p>
 <h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
 <p>An IDL file can contain 4 kinds of declarations: enums, flags, records, and interfaces.</p>
 <ul>
-<li><a href="#enums"><strong>Enums</strong></a> become C++ enum classes, Java enums, or ObjC <code>NS_ENUM</code>s.</li>
-<li><a href="#flags"><strong>Flags</strong></a> become C++ enum classes with convenient bit-oriented operators, Java enums with <code>EnumSet</code>, or ObjC <code>NS_OPTIONS</code>.</li>
+<li><a href="#enums"><strong>Enums</strong></a> become C++ enum classes, Java enums, ObjC <code>NS_ENUM</code>s, Python <code>IntEnum</code>s, or C# <code>System.Enum</code>s.</li>
+<li><a href="#flags"><strong>Flags</strong></a> become C++ enum classes with convenient bit-oriented operators, Java enums with <code>EnumSet</code>, 
+  ObjC <code>NS_OPTIONS</code>, Python <code>IntFlag</code>s, or C# <code>System.Enum</code>s with the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.flagsattribute?view=net-5.0"><code>[Flags]</code> Attribute</a>.</li>
 <li><a href="#records"><strong>Records</strong></a> are pure-data value objects.</li>
 <li><a href="#interfaces"><strong>Interfaces</strong></a> are objects with defined methods to call (in C++, passed by <code>shared_ptr</code>). Djinni
-  produces code allowing an interface implemented in C++ to be transparently used from ObjC or
-  Java, and vice versa.</li>
+  produces code allowing an interface implemented in C++ to be transparently used from ObjC,
+  Java, Python or C#, and vice versa.</li>
 </ul>
 <h3 id="enums">Enums<a class="headerlink" href="#enums" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>my_enum = enum {
@@ -1099,7 +1148,7 @@ will only be processed once.</p>
 }
 </code></pre></div>
 <p>Enums are translated to C++ <code>enum class</code>es with underlying type <code>int</code>, ObjC <code>NS_ENUM</code>s with
-underlying type <code>NSInteger</code>, and Java enums.</p>
+underlying type <code>NSInteger</code>, Java enums, Python <code>IntEnum</code>s, and C# <code>System.Enum</code>s.</p>
 <h3 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>my_flags = flags {
     flag1;
@@ -1109,14 +1158,14 @@ underlying type <code>NSInteger</code>, and Java enums.</p>
     all_flags = all;
 }
 </code></pre></div>
-<p>Flags are translated to C++ <code>enum class</code>es with underlying type <code>unsigned</code> and a generated set
-of overloaded bitwise operators for convenience, ObjC <code>NS_OPTIONS</code> with underlying type
-<code>NSUInteger</code>, and Java <code>EnumSet&lt;&gt;</code>. Contrary to the above enums, the enumerants of flags represent
-single bits instead of integral values.</p>
-<p>In the above example the elements marked with <code>none</code> and <code>all</code> are given special meaning.
-In C++ and ObjC the <code>no_flags</code> option is generated with a value that has no bits set (i.e. <code>0</code>),
-and <code>all_flags</code> is generated as a bitwise-or combination of all other values. In Java these
-special options are not generated as one can just use <code>EnumSet.noneOf()</code> and <code>EnumSet.allOf()</code>.</p>
+<p>Flags are translated to C++ <code>enum class</code>es with underlying type <code>unsigned</code> and a generated set of
+overloaded bitwise operators for convenience, ObjC <code>NS_OPTIONS</code> with underlying type <code>NSUInteger</code>,
+Java <code>EnumSet&lt;&gt;</code>, Python <code>IntFlag</code>, and C# <code>System.Enum</code>s with the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.flagsattribute?view=net-5.0"><code>[Flags]</code> Attribute</a>. 
+Contrary to the above enums, the enumerants of flags represent single bits instead of integral values.</p>
+<p>In the above example the elements marked with <code>none</code> and <code>all</code> are given special meaning.  In C++,
+ObjC, and Python the <code>no_flags</code> option is generated with a value that has no bits set (i.e. <code>0</code>),
+and <code>all_flags</code> is generated as a bitwise-or combination of all other values. In Java these special
+options are not generated as one can just use <code>EnumSet.noneOf()</code> and <code>EnumSet.allOf()</code>.</p>
 <h3 id="records">Records<a class="headerlink" href="#records" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>my_record = record {
     id: i32;
@@ -1139,10 +1188,10 @@ special options are not generated as one can just use <code>EnumSet.noneOf()</co
 <p>Records are data objects. In C++, records contain all their elements by value, including other
 records (so a record cannot contain itself).</p>
 <h4 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">&para;</a></h4>
-<p>To support extra fields and/or methods, a record can be "extended" in any language. To extend
-a record in a language, you can add a <code>+c</code> (C++), <code>+j</code> (Java), or <code>+o</code> (ObjC) flag after the
-record tag. The generated type will have a <code>Base</code> suffix, and you should create a derived type
-without the suffix that extends the record type.</p>
+<p>To support extra fields and/or methods, a record can be "extended" in any language. To extend a
+record in a language, you can add a <code>+c</code> (C++), <code>+j</code> (Java), <code>+o</code> (ObjC), <code>+p</code> (Python), or <code>+s</code> (C#) flag
+after the record tag. The generated type will have a <code>Base</code> suffix, and you should create a derived
+type without the suffix that extends the record type.</p>
 <p>The derived type must be constructible in the same way as the <code>Base</code> type. Interfaces will
 always use the derived type.</p>
 <h4 id="derived-methods">Derived methods<a class="headerlink" href="#derived-methods" title="Permanent link">&para;</a></h4>
@@ -1152,8 +1201,8 @@ always use the derived type.</p>
 } deriving (eq, ord)
 </code></pre></div>
 <p>For record types, Haskell-style "deriving" declarations are supported to generate some common
-methods. Djinni is capable of generating equality and order comparators, implemented
-as operator overloading in C++ and standard comparison functions in Java / Objective-C.</p>
+methods. Djinni is capable of generating equality and order comparators, implemented as operator
+overloading in C++ and standard comparison functions in Java, Objective-C, Python and C#.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -1175,43 +1224,47 @@ my_cpp_interface = interface +c {
     const version: i32 = 1;
 }
 
-# This interface will be implemented in Java and ObjC and can be called from C++.
-my_client_interface = interface +j +o {
+# This interface will be implemented in Java, ObjC, Python and C# and can be called from C++.
+my_client_interface = interface +j +o +p +s {
     log_string(str: string): bool;
 }
 </code></pre></div>
 <p>Interfaces are objects with defined methods to call (in C++, passed by <code>shared_ptr</code>). Djinni
-produces code allowing an interface implemented in C++ to be transparently used from ObjC or
-Java, and vice versa.</p>
+produces code allowing an interface implemented in C++ to be transparently used from ObjC,
+Java Python or C# and vice versa.</p>
 <h4 id="special-methods-for-c-only">Special Methods for C++ Only<a class="headerlink" href="#special-methods-for-c-only" title="Permanent link">&para;</a></h4>
-<p><code>+c</code> interfaces (implementable only in C++) can have methods flagged with the special keywords const and static which have special effects in C++:</p>
+<p><code>+c</code> interfaces (implementable only in C++) can have methods flagged with the special keywords const and static which 
+have special effects in C++:</p>
 <p>special_methods = interface +c {
        const accessor_method();
        static factory_method();
    }</p>
 <ul>
 <li><code>const</code> methods will be declared as const in C++, though this cannot be enforced on callers in other languages, which lack this feature.</li>
-<li><code>static</code> methods will become a static method of the C++ class, which can be called from other languages without an object.  This is often useful for factory methods to act as a cross-language constructor.</li>
+<li><code>static</code> methods will become a static method of the C++ class, which can be called from other languages without an object.<br />
+  This is often useful for factory methods to act as a cross-language constructor.</li>
 </ul>
 <h4 id="exception-handling">Exception Handling<a class="headerlink" href="#exception-handling" title="Permanent link">&para;</a></h4>
 <p>When an interface implemented in C++ throws a <code>std::exception</code>, it will be translated to a
-<code>java.lang.RuntimeException</code> in Java or an <code>NSException</code> in Objective-C. The <code>what()</code> message
-will be translated as well.</p>
+<code>java.lang.RuntimeException</code> in Java, an <code>NSException</code> in Objective-C, a <code>RuntimeError</code> in Python, 
+or a <code>System.Exception</code> in C#.
+The <code>what()</code> message will be translated as well.</p>
 <h4 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">&para;</a></h4>
-<p>Constants can be defined within interfaces and records. In Java and C++ they are part of the
+<p>Constants can be defined within interfaces and records. In Java, Python, C# and C++ they are part of the
 generated class; and in Objective-C, constant names are globals with the name of the
 interface/record prefixed. Example:</p>
-<div class="highlight"><pre><span></span><code>record_with_const = record +c +j +o {
+<div class="highlight"><pre><span></span><code>record_with_const = record +c +j +o +p +s {
     const const_value: i32 = 8;
 }
 </code></pre></div>
-<p>will be <code>RecordWithConst::CONST_VALUE</code> in C++, <code>RecordWithConst.CONST_VALUE</code> in Java, and
-<code>RecordWithConstConstValue</code> in Objective-C.</p>
+<p>will be <code>RecordWithConst::CONST_VALUE</code> in C++, <code>RecordWithConst.CONST_VALUE</code> in Java,
+<code>RecordWithConst.CONST_VALUE</code> in Python, <code>RecordWithConst.ConstValue</code> in C#, and <code>RecordWithConstConstValue</code> in Objective-C.</p>
 <h2 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code># This is a comment
 </code></pre></div>
-<p>If comments are are placed <strong>on top or inside a type definition</strong>,
-they will be converted to <strong>Javadoc / Doxygen compatible</strong> comments in the generated Java/C++/Objective-C interfaces.</p>
+<p>If comments are placed <strong>on top or inside a type definition</strong>, they will be converted to
+<strong>Javadoc / Doxygen compatible</strong> comments in the generated Java/C++/Objective-C interfaces, or a
+Python <strong>docstring</strong>. Comments are currently not available in C#.</p>
                 
                   
                     
@@ -1220,7 +1273,7 @@ they will be converted to <strong>Javadoc / Doxygen compatible</strong> comments
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 24, 2020</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 23, 2021</span>
     
   </small>
 </div>
@@ -1236,6 +1289,7 @@ they will be converted to <strong>Javadoc / Doxygen compatible</strong> comments
             </article>
           </div>
         </div>
+        
       </main>
       
         
@@ -1362,10 +1416,10 @@ they will be converted to <strong>Javadoc / Doxygen compatible</strong> comments
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
     
   </body>

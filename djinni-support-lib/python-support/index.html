@@ -21,29 +21,6 @@
   IN THE SOFTWARE.
 -->
 
-<!--
-  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
-  Copyright (c) 2020 cross-language-cpp
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -57,19 +34,19 @@
       
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
-        <title>Djinni - Djinni</title>
+        <title>Python Support - Djinni</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.e35208c4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
         
       
     
@@ -84,7 +61,7 @@
     
     
     
-      <link rel="stylesheet" href="stylesheets/theme.css">
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
     
     
       
@@ -94,10 +71,12 @@
   <!-- Determine title -->
   
   
+    
+  
 
   <!-- Open graph meta tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Djinni" />
+  <meta property="og:title" content="Djinni - Python Support" />
   <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#." />
   <meta property="og:url" content="None" />
 
@@ -115,7 +94,7 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -125,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#simple-idl" class="md-skip">
+        <a href="#python-support" class="md-skip">
           Skip to content
         </a>
       
@@ -136,9 +115,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Djinni" class="md-header__button md-logo" aria-label="Djinni" data-md-component="logo">
+    <a href="../.." title="Djinni" class="md-header__button md-logo" aria-label="Djinni" data-md-component="logo">
       
-  <img src="assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -154,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Djinni
+              Python Support
             
           </span>
         </div>
@@ -222,7 +201,6 @@
     <div class="md-container" data-md-component="container">
       
       
-  
         
           
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
@@ -232,12 +210,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -252,7 +228,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="overview/" class="md-tabs__link">
+      <a href="../../overview/" class="md-tabs__link">
         Getting Started
       </a>
     </li>
@@ -268,7 +244,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="djinni-generator/setup/" class="md-tabs__link">
+      <a href="../../djinni-generator/setup/" class="md-tabs__link">
         Generator <code>v0.5.0</code>
       </a>
     </li>
@@ -278,13 +254,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="djinni-support-lib/install/" class="md-tabs__link">
+      <a href="../install/" class="md-tabs__link md-tabs__link--active">
         Support Lib <code>v0.1.0</code>
       </a>
     </li>
@@ -305,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="djinni-intellij-plugin/" class="md-tabs__link">
+      <a href="../../djinni-intellij-plugin/" class="md-tabs__link">
         IDE Integration
       </a>
     </li>
@@ -323,7 +301,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="icon_resources/" class="md-tabs__link">
+      <a href="../../icon_resources/" class="md-tabs__link">
         Resources
       </a>
     </li>
@@ -335,138 +313,12 @@
 </nav>
         
       
-
-  <!-- Additional styles for landing page -->
-  <style>
-
-    /* Application header should be static for the landing page */
-    .md-header {
-      position: initial;
-    }
-
-    .tx-container {
-      text-align: center;
-      padding-top: 1.8rem;
-      background-color: var(--md-primary-fg-color);
-      
-      background-repeat: no-repeat;
-      background-position: bottom;
-      background-size: 101%;
-    }
-
-    .tx-hero {
-      padding: .5rem;
-    }
-
-    .tx-hero p {
-      max-width: 800px;
-      margin: 1rem auto;
-    }
-
-    .tx-hero h1, .tx-hero p {
-      color: var(--md-primary-bg-color);
-    }
-
-    
-
-    .tx-hero .md-button {
-      margin-top: .5rem;
-      margin-right: .5rem;
-      color: var(--md-primary-bg-color);
-    }
-    .tx-hero .md-button--primary {
-      color: var(--md-primary-fg-color);
-      background-color: var(--md-primary-bg-color);
-      border-color: var(--md-primary-bg-color);
-    }
-
-    /* Hide table of contents */
-    @media screen and (min-width: 60em) {
-      .md-sidebar--secondary {
-        display: none;
-      }
-    }
-
-    /* Hide navigation */
-    @media screen and (min-width: 76.25em) {
-      .md-sidebar--primary {
-        display: none;
-      }
-    }
-
-    .md-content {
-      margin: -1.5rem auto 0 auto;
-      text-align: center;
-    }
-
-
-    .tabbed-set {
-      background: var(--md-primary-bg-color);
-      box-shadow: 0 0 20px 0px #00000035;
-    }
-
-    .tabbed-set label {
-      color: var(--md-primary-bg-color)
-    }
-
-    .md-content hr {
-      margin: 2.2em auto;
-      max-width: 400px;
-    }
-
-    .md-content article h1, .md-content .headerlink, hr:last-of-type, .md-source-date {
-      display: none;
-    }
-  </style>
-
-  <!-- Hero for landing page -->
-  <section class="tx-container">
-    <div class="md-grid md-typeset">
-      <div class="tx-hero">
-
-        <!-- Hero content -->
-        <div class="tx-hero__content">
-          <h1>Integrate <b>C++</b> code into<br>your <b>Java</b>, <b>Kotlin</b>, <b>Objective-C</b>, <b>Swift</b>, <b>Python</b> or <b>C#</b> application!</h1>
-          <p>Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#.</p>
-          <a
-            href="overview/"
-            title="Overview"
-            class="md-button md-button--primary"
-          >
-            Getting Started
-          </a>
-          <a
-            href="https://github.com/cross-language-cpp"
-            title="Contribute on Github"
-            class="md-button"
-            target="blank"
-          >
-          <img class="twemoji" src="assets/github.svg"/>&nbsp;&nbsp;
-          Contribute
-          </a>
-          <a
-            href="https://mobilecpp.slack.com/"
-            title="Chat on Slack"
-            class="md-button"
-            target="blank"
-          >
-          <img class="twemoji" src="assets/slack.svg"/>&nbsp;&nbsp;
-          Slack
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <img src="assets/hero_background_new.svg" />
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -476,9 +328,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Djinni" class="md-nav__button md-logo" aria-label="Djinni" data-md-component="logo">
+    <a href="../.." title="Djinni" class="md-nav__button md-logo" aria-label="Djinni" data-md-component="logo">
       
-  <img src="assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     Djinni
@@ -492,75 +344,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#simple-idl" class="md-nav__link">
-    Simple IDL
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ide-integration" class="md-nav__link">
-    IDE Integration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calls-out-of-c" class="md-nav__link">
-    Calls out of C++
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-target-any-operating-system" class="md-nav__link">
-    Can Target any Operating System
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maintained-by-a-small-but-active-community" class="md-nav__link">
-    Maintained by a Small, but Active Community
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -594,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="overview/" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -606,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/" class="md-nav__link">
+      <a href="../../setup/" class="md-nav__link">
         Setup
       </a>
     </li>
@@ -618,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="example/" class="md-nav__link">
+      <a href="../../example/" class="md-nav__link">
         Example
       </a>
     </li>
@@ -630,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -672,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-generator/setup/" class="md-nav__link">
+      <a href="../../djinni-generator/setup/" class="md-nav__link">
         Generator Setup
       </a>
     </li>
@@ -684,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-generator/idl/" class="md-nav__link">
+      <a href="../../djinni-generator/idl/" class="md-nav__link">
         Interface Definition Language (IDL)
       </a>
     </li>
@@ -696,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-generator/cli-usage/" class="md-nav__link">
+      <a href="../../djinni-generator/cli-usage/" class="md-nav__link">
         Using the Generator
       </a>
     </li>
@@ -708,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-generator/generated-code-usage/" class="md-nav__link">
+      <a href="../../djinni-generator/generated-code-usage/" class="md-nav__link">
         Use Generated Code
       </a>
     </li>
@@ -720,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-generator/developer-guide/" class="md-nav__link">
+      <a href="../../djinni-generator/developer-guide/" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -739,12 +527,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Support Lib <code>v0.1.0</code>
@@ -762,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-support-lib/install/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         Installing the Support-Lib
       </a>
     </li>
@@ -774,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-support-lib/developer-guide/" class="md-nav__link">
+      <a href="../developer-guide/" class="md-nav__link">
         Developer guide
       </a>
     </li>
@@ -784,11 +574,65 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="djinni-support-lib/python-support/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Python Support
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-suite" class="md-nav__link">
+    Test Suite
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-limitations" class="md-nav__link">
+    Known limitations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -849,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-intellij-plugin/" class="md-nav__link">
+      <a href="../../djinni-intellij-plugin/" class="md-nav__link">
         About IntelliJ IDEA Plugin
       </a>
     </li>
@@ -861,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-intellij-plugin/developer-guide/" class="md-nav__link">
+      <a href="../../djinni-intellij-plugin/developer-guide/" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -900,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="vscode-djinni/" class="md-nav__link">
+      <a href="../../vscode-djinni/" class="md-nav__link">
         About VS Code Extension
       </a>
     </li>
@@ -912,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="vscode-djinni/developer-guide/" class="md-nav__link">
+      <a href="../../vscode-djinni/developer-guide/" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -960,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="icon_resources/" class="md-nav__link">
+      <a href="../../icon_resources/" class="md-nav__link">
         Djinni Logo Resources
       </a>
     </li>
@@ -981,15 +825,15 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -999,36 +843,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#simple-idl" class="md-nav__link">
-    Simple IDL
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-requisites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ide-integration" class="md-nav__link">
-    IDE Integration
+  <a href="#test-suite" class="md-nav__link">
+    Test Suite
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#calls-out-of-c" class="md-nav__link">
-    Calls out of C++
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-target-any-operating-system" class="md-nav__link">
-    Can Target any Operating System
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maintained-by-a-small-but-active-community" class="md-nav__link">
-    Maintained by a Small, but Active Community
+  <a href="#known-limitations" class="md-nav__link">
+    Known limitations
   </a>
   
 </li>
@@ -1045,30 +875,37 @@
             <article class="md-content__inner md-typeset">
               
   
-  
                 
                 
-                  <h1>Home</h1>
-                
-                <h2 id="simple-idl"><img alt="👏" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44f.svg" title=":clap:" /> Simple IDL<a class="headerlink" href="#simple-idl" title="Permanent link">&para;</a></h2>
-<p>The Djinni <a href="djinni-generator/idl/"><strong>Interface Definition Language</strong></a> provides a simple, yet powerful way to design your interfaces.</p>
-<hr />
-<h2 id="ide-integration"><img alt="🔌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f50c.svg" title=":electric_plug:" /> IDE Integration<a class="headerlink" href="#ide-integration" title="Permanent link">&para;</a></h2>
-<p>Plugins for Djinni are available for <a href="djinni-intellij-plugin/"><strong>IntelliJ IDEA</strong></a> &amp; <a href="vscode-djinni/"><strong>VS Code</strong></a></p>
-<hr />
-<h2 id="calls-out-of-c"><img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> Calls out of C++<a class="headerlink" href="#calls-out-of-c" title="Permanent link">&para;</a></h2>
-<p>With Djinni you can implement interfaces in any target language and call the implementation from C++!</p>
-<hr />
-<h2 id="can-target-any-operating-system"><img alt="💥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4a5.svg" title=":boom:" /> Can Target any Operating System<a class="headerlink" href="#can-target-any-operating-system" title="Permanent link">&para;</a></h2>
-<p>Djinni comes with support for native app development on every popular OS:</p>
-<p><img alt="Djinni architecture" src="assets/overview.drawio.svg" /></p>
-<hr />
-<h2 id="maintained-by-a-small-but-active-community"><img alt="🌎" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f30e.svg" title=":earth_americas:" /> Maintained by a Small, but Active Community<a class="headerlink" href="#maintained-by-a-small-but-active-community" title="Permanent link">&para;</a></h2>
-<p>Djinni was originally developed by Dropbox in 2014.<br>
-Since June 2020 it is independently maintained by a small group of individuals from all over the globe.</p>
-<p>Get in contact with us on the <a href="https://mobilecpp.slack.com/">Mobile C++ Slack</a>! <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
-<p><br>
-<br></p>
+                <h1 id="python-support">Python Support<a class="headerlink" href="#python-support" title="Permanent link">&para;</a></h1>
+<p>Python support in Djinni is experimental, but ready to try out.  It can generate code for bridging
+C++ with Python 3.</p>
+<p>For more information, you can check out the talk from CppCon 2015.
+<a href="https://bit.ly/djinnitalk2">Slides</a> and <a href="https://bit.ly/djinnivideo2">video</a> are avilable online.</p>
+<h2 id="pre-requisites">Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h2>
+<p>Djinni generates code which should work with Python 3.  Python support has only been tested on macOS
+with the clang compiler.  ~~It's been designed to work on any platform, and the known issues are in
+the build scripts rather than the generated code itself.~~ <em>(We're now using CMake to build all
+bindings but it still requires testing in platforms other than macOS.)</em></p>
+<p>The Python support generated by Djinni makes use of a few non-default Python extensions, as does the
+test suite.  You can install them as follows:</p>
+<div class="highlight"><pre><span></span><code>  sudo pip3 install cffi
+  sudo pip3 install future
+  sudo pip3 install pytest
+</code></pre></div>
+<h2 id="test-suite">Test Suite<a class="headerlink" href="#test-suite" title="Permanent link">&para;</a></h2>
+<p>Because of the known limitations described below, the Python test suite does not use all of the same
+inputs as the other languages.  As a result, you'll see a separate <code>pycpp</code> directory in
+generated-src.  This contains output of the standard C++ generator, but for the specific input files
+used by the Python test suite.</p>
+<h2 id="known-limitations">Known limitations<a class="headerlink" href="#known-limitations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Proxy caching is not yet implemented.  In addition to some inefficiency, this means that the same
+object passed across the language boundary twice is not guaranteed to appear as a single object on
+the other side.</li>
+<li>The support library code makes direct reference to <optional> types rather than respecting the
+command-line choice of a different optional library.</li>
+</ul>
                 
                   
                     
@@ -1085,7 +922,6 @@ Since June 2020 it is independently maintained by a small group of individuals f
                 
               
 
-
               
                 
 
@@ -1097,20 +933,33 @@ Since June 2020 it is independently maintained by a small group of individuals f
         
       </main>
       
-  
         
 <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        <a href="../developer-guide/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Developer guide
+            </div>
+          </div>
+        </a>
       
-        <a href="overview/" class="md-footer__link md-footer__link--next" rel="next">
+      
+        <a href="../../djinni-intellij-plugin/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Overview
+              About IntelliJ IDEA Plugin
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1204,15 +1053,14 @@ Since June 2020 it is independently maintained by a small group of individuals f
   </div>
 </footer>
       
-
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
     
   </body>

@@ -29,13 +29,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java or Objective-C.">
+        <meta name="description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#.">
       
       
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
@@ -43,10 +43,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
         
       
     
@@ -77,7 +77,7 @@
   <!-- Open graph meta tags -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Djinni - Using the Generator" />
-  <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java or Objective-C." />
+  <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#." />
   <meta property="og:url" content="None" />
 
 
@@ -86,12 +86,17 @@
   
     
     
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
       
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -105,14 +110,6 @@
       
     </div>
     <div data-md-component="announce">
-      
-        <aside class="md-announce">
-          <div class="md-announce__inner md-grid md-typeset">
-            
-    🚧 We are currently migrating djinni <a href="https://github.com/cross-language-cpp/djinni/issues/17" target="blank">to a new project structure</a>. Be aware that this documentation may not be complete yet!
-
-          </div>
-        </aside>
       
     </div>
     
@@ -142,9 +139,30 @@
         </div>
       </div>
     </div>
-    <div class="md-header__options">
-      
-    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="" type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="" type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -160,7 +178,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
       <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
@@ -229,7 +247,7 @@
   
     <li class="md-tabs__item">
       <a href="../setup/" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v0.3.1</code>
+        Generator <code>v0.5.0</code>
       </a>
     </li>
   
@@ -245,7 +263,7 @@
   
     <li class="md-tabs__item">
       <a href="../../djinni-support-lib/install/" class="md-tabs__link">
-        Support Lib <code>v0.0.1</code>
+        Support Lib <code>v0.1.0</code>
       </a>
     </li>
   
@@ -429,13 +447,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
-        Generator <code>v0.3.1</code>
+        Generator <code>v0.5.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Generator <code>v0.3.1</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v0.5.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v0.3.1</code>
+          Generator <code>v0.5.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -473,6 +491,7 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+      
         
       
       
@@ -487,6 +506,7 @@
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -549,6 +569,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccli" class="md-nav__link">
+    C++/CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#yaml-generation" class="md-nav__link">
     Yaml Generation
   </a>
@@ -567,14 +601,7 @@
     Identifier Style
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#default-identifier-style-settings" class="md-nav__link">
-    Default Identifier Style settings
-  </a>
-  
-    <nav class="md-nav" aria-label="Default Identifier Style settings">
+    <nav class="md-nav" aria-label="Identifier Style">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -594,6 +621,20 @@
           <li class="md-nav__item">
   <a href="#objective-c_2" class="md-nav__link">
     Objective C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccli_1" class="md-nav__link">
+    C++/CLI
   </a>
   
 </li>
@@ -660,13 +701,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
-        Support Lib <code>v0.0.1</code>
+        Support Lib <code>v0.1.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Support Lib <code>v0.0.1</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Support Lib <code>v0.1.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Support Lib <code>v0.0.1</code>
+          Support Lib <code>v0.1.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -677,6 +718,30 @@
     <li class="md-nav__item">
       <a href="../../djinni-support-lib/install/" class="md-nav__link">
         Installing the Support-Lib
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../djinni-support-lib/developer-guide/" class="md-nav__link">
+        Developer guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../djinni-support-lib/python-support/" class="md-nav__link">
+        Python Support
       </a>
     </li>
   
@@ -723,13 +788,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
       
       <label class="md-nav__link" for="__nav_5_1">
-        IntelliJ IDEA Plugin <code>v0.10.4</code>
+        IntelliJ IDEA Plugin <code>v0.11.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="IntelliJ IDEA Plugin <code>v0.10.4</code>" data-md-level="2">
+      <nav class="md-nav" aria-label="IntelliJ IDEA Plugin <code>v0.11.0</code>" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_1">
           <span class="md-nav__icon md-icon"></span>
-          IntelliJ IDEA Plugin <code>v0.10.4</code>
+          IntelliJ IDEA Plugin <code>v0.11.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -774,13 +839,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
       
       <label class="md-nav__link" for="__nav_5_2">
-        VS Code Extension <code>v1.0.5</code>
+        VS Code Extension <code>v1.1.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="VS Code Extension <code>v1.0.5</code>" data-md-level="2">
+      <nav class="md-nav" aria-label="VS Code Extension <code>v1.1.0</code>" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
-          VS Code Extension <code>v1.0.5</code>
+          VS Code Extension <code>v1.1.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -877,6 +942,7 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
     
   
   
@@ -937,6 +1003,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccli" class="md-nav__link">
+    C++/CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#yaml-generation" class="md-nav__link">
     Yaml Generation
   </a>
@@ -955,14 +1035,7 @@
     Identifier Style
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#default-identifier-style-settings" class="md-nav__link">
-    Default Identifier Style settings
-  </a>
-  
-    <nav class="md-nav" aria-label="Default Identifier Style settings">
+    <nav class="md-nav" aria-label="Identifier Style">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -982,6 +1055,20 @@
           <li class="md-nav__item">
   <a href="#objective-c_2" class="md-nav__link">
     Objective C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccli_1" class="md-nav__link">
+    C++/CLI
   </a>
   
 </li>
@@ -1029,6 +1116,12 @@
    <span class="se">\</span>
    --objcpp-out OBJC_OUTPUT_FOLDER <span class="se">\</span>
    <span class="se">\</span>
+   --py-out PYTHON_OUTPUT_FOLDER <span class="se">\</span>
+   --pycffi-out CFFI_OUTPUT_FOLDER <span class="se">\ </span><span class="c1"># Required for Python support</span>
+   --pycffi-package-name PyCFFIlib <span class="se">\</span>
+   --pycffi-dynamic-lib-list mylib <span class="se">\</span>
+   --c-wrapper-out C_WRAPPER_OUTPUT_FOLDER <span class="se">\ </span><span class="c1"># Required for Python support</span>
+   <span class="se">\</span>
    --idl MY_PROJECT.djinni
 </code></pre></div>
 <div class="admonition note">
@@ -1059,7 +1152,7 @@
 </tr>
 <tr>
 <td><code>--idl-include-path &lt;path&gt; ...</code></td>
-<td>An include path to search for Djinni @import directives. Can specify multiple paths.</td>
+<td>An include path to search for Djinni <code>@import</code> directives. Can specify multiple paths.</td>
 </tr>
 </tbody>
 </table>
@@ -1094,7 +1187,7 @@
 </tr>
 <tr>
 <td><code>--java-generate-interfaces &lt;true/false&gt;</code></td>
-<td>Whether Java interfaces should be used instead of abstract classes where possible (default: false).</td>
+<td>Whether Java interfaces should be used instead of abstract classes where possible (default: <code>false</code>).</td>
 </tr>
 <tr>
 <td><code>--java-nullable-annotation &lt;nullable-annotation-class&gt;</code></td>
@@ -1106,7 +1199,7 @@
 </tr>
 <tr>
 <td><code>--java-implement-android-os-parcelable &lt;true/false&gt;</code></td>
-<td>all generated java classes will implement the interface android.os.Parcelable</td>
+<td>all generated java classes will implement the interface <code>android.os.Parcelable</code></td>
 </tr>
 <tr>
 <td><code>--java-use-final-for-record &lt;use-final-for-record&gt;</code></td>
@@ -1133,7 +1226,7 @@
 </tr>
 <tr>
 <td><code>--cpp-include-prefix &lt;prefix&gt;</code></td>
-<td>The prefix for #includes of header files from C++ files.</td>
+<td>The prefix for <code>#includes</code> of header files from C++ files.</td>
 </tr>
 <tr>
 <td><code>--cpp-namespace ...</code></td>
@@ -1157,7 +1250,7 @@
 </tr>
 <tr>
 <td><code>--cpp-enum-hash-workaround &lt;true/false&gt;</code></td>
-<td>Work around LWG-2148 by generating std::hash specializations for C++ enums (default: <code>true</code>)</td>
+<td>Work around LWG-2148 by generating <code>std::hash</code> specializations for C++ enums (default: <code>true</code>)</td>
 </tr>
 <tr>
 <td><code>--cpp-nn-header &lt;header&gt;</code></td>
@@ -1196,11 +1289,11 @@
 </tr>
 <tr>
 <td><code>--jni-include-prefix &lt;prefix&gt;</code></td>
-<td>The prefix for #includes of JNI header files from JNI C++ files.</td>
+<td>The prefix for <code>#includes</code> of JNI header files from JNI C++ files.</td>
 </tr>
 <tr>
 <td><code>--jni-include-cpp-prefix &lt;prefix&gt;</code></td>
-<td>The prefix for #includes of the main header files from JNI C++ files.</td>
+<td>The prefix for <code>#includes</code> of the main header files from JNI C++ files.</td>
 </tr>
 <tr>
 <td><code>--jni-namespace ...</code></td>
@@ -1208,7 +1301,7 @@
 </tr>
 <tr>
 <td><code>--jni-base-lib-include-prefix ...</code></td>
-<td>The JNI base support library's include path (default: djinni/jni/).</td>
+<td>The JNI base support library's include path (default: <code>djinni/jni/</code>).</td>
 </tr>
 </tbody>
 </table>
@@ -1227,7 +1320,7 @@
 </tr>
 <tr>
 <td><code>--objc-header-out &lt;out-folder&gt;</code></td>
-<td>The output folder for Objective-C header files (default: the same as --objc-out).</td>
+<td>The output folder for Objective-C header files (default: the same as <code>--objc-out</code>).</td>
 </tr>
 <tr>
 <td><code>--objc-h-ext &lt;ext&gt;</code></td>
@@ -1239,15 +1332,15 @@
 </tr>
 <tr>
 <td><code>--objc-include-prefix &lt;prefix&gt;</code></td>
-<td>The prefix for #import of header files from Objective-C files.</td>
+<td>The prefix for <code>#import</code> of header files from Objective-C files.</td>
 </tr>
 <tr>
 <td><code>--objc-swift-bridging-header &lt;name&gt;</code></td>
-<td>The name of Objective-C Bridging Header used in XCode's Swift projects.</td>
+<td>The name of Objective-C Bridging Header used in XCode's Swift projects. The output folder is <code>--objc-header-out</code>.</td>
 </tr>
 <tr>
 <td><code>--objc-closed-enums &lt;true/false&gt;</code></td>
-<td>All generated Objective-C enums will be NS_CLOSED_ENUM (default: <code>false</code>).</td>
+<td>All generated Objective-C enums will be <code>NS_CLOSED_ENUM</code> (default: <code>false</code>).</td>
 </tr>
 </tbody>
 </table>
@@ -1270,23 +1363,23 @@
 </tr>
 <tr>
 <td><code>--objcpp-include-prefix &lt;prefix&gt;</code></td>
-<td>The prefix for #import of Objective-C++ header files from Objective-C++ files.</td>
+<td>The prefix for <code>#import</code> of Objective-C++ header files from Objective-C++ files.</td>
 </tr>
 <tr>
 <td><code>--objcpp-include-cpp-prefix &lt;prefix&gt;</code></td>
-<td>The prefix for #include of the main C++ header files from Objective-C++ files.</td>
+<td>The prefix for <code>#include</code> of the main C++ header files from Objective-C++ files.</td>
 </tr>
 <tr>
 <td><code>--objcpp-include-objc-prefix &lt;prefix&gt;</code></td>
-<td>The prefix for #import of the Objective-C header files from Objective-C++ files (default: the same as <code>--objcpp-include-prefix</code>)</td>
+<td>The prefix for <code>#import</code> of the Objective-C header files from Objective-C++ files (default: the same as <code>--objcpp-include-prefix</code>)</td>
 </tr>
 <tr>
 <td><code>--cpp-extended-record-include-prefix &lt;prefix&gt;</code></td>
-<td>The prefix path for #include of the extended record C++ header (<code>.hpp</code>) files</td>
+<td>The prefix path for <code>#include</code> of the extended record C++ header (<code>.hpp</code>) files</td>
 </tr>
 <tr>
 <td><code>--objc-extended-record-include-prefix &lt;prefix&gt;</code></td>
-<td>The prefix path for #import of the extended record Objective-C header (<code>.h</code>) files</td>
+<td>The prefix path for <code>#import</code> of the extended record Objective-C header (<code>.h</code>) files</td>
 </tr>
 <tr>
 <td><code>--objcpp-namespace &lt;prefix&gt;</code></td>
@@ -1294,7 +1387,85 @@
 </tr>
 <tr>
 <td><code>--objc-base-lib-include-prefix ...</code></td>
-<td>The Objective-C base support library's include path (default: djinni/objc/).</td>
+<td>The Objective-C base support library's include path (default: <code>djinni/objc/</code>).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--py-out &lt;out-folder&gt;</code></td>
+<td>The output folder for Python files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--pycffi-out &lt;out-folder&gt;</code></td>
+<td>The output folder for PyCFFI files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--pycffi-package-name ...</code></td>
+<td>The package name to use for the generated PyCFFI classes.</td>
+</tr>
+<tr>
+<td><code>--pycffi-dynamic-lib-list ...</code></td>
+<td>The names of the dynamic libraries to be linked with PyCFFI.</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-out &lt;out-folder&gt;</code></td>
+<td>The output folder for C wrapper files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-header-out &lt;out-folder&gt;</code></td>
+<td>The output folder for C wrapper header files (default: the same as <code>--c-wrapper-out</code>).</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-include-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for #includes of C wrapper header files from C wrapper C++ files.</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-include-cpp-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for #includes of C++ header files from C wrapper C++ files.</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-base-lib-include-prefix &lt;prefix&gt;</code></td>
+<td>The C wrapper base support library's include path (default: <code>djinni/cwrapper/</code>).</td>
+</tr>
+<tr>
+<td><code>--py-import-prefix &lt;import-prefix&gt;</code></td>
+<td>The import prefix used within python generated files (default: "")</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ccli">C++/CLI<a class="headerlink" href="#ccli" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--cppcli-out &lt;out-folder&gt;</code></td>
+<td>The output folder for C++/CLI files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--cppcli-namespace ...</code></td>
+<td>The namespace name to use for generated C++/CLI classes.</td>
+</tr>
+<tr>
+<td><code>--cppcli-include-cpp-prefix</code></td>
+<td>The prefix for #include of the main C++ header files from C++/CLI files.</td>
+</tr>
+<tr>
+<td><code>--cppcli-base-lib-include-prefix ...</code></td>
+<td>The C++/CLI base support library's include path (default: <code>djinni/cppcli/</code>).</td>
 </tr>
 </tbody>
 </table>
@@ -1345,105 +1516,8 @@
 </tbody>
 </table>
 <h3 id="identifier-style">Identifier Style<a class="headerlink" href="#identifier-style" title="Permanent link">&para;</a></h3>
-<p>Identifier styles (ex: <code>FooBar</code>, <code>fooBar</code>, <code>foo_bar</code>, <code>FOO_BAR</code>, <code>m_fooBar</code>)</p>
-<table>
-<thead>
-<tr>
-<th>Argument</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>--ident-java-enum ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-java-field ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-java-type ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-cpp-enum ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-cpp-field ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-cpp-method ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-cpp-type ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-cpp-enum-type ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-cpp-type-param ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-cpp-local ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-cpp-file ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-jni-class ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-jni-file ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-objc-enum ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-objc-field ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-objc-method ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-objc-type ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-objc-type-param ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-objc-local ...</code></td>
-</tr>
-<tr>
-<td><code>--ident-objc-file ...</code></td>
-</tr>
-</tbody>
-</table>
 <p>The <em>Identifier Style</em> is a text conversion hint on how to generate names from the djinni idl file.</p>
-<p>Example:
-The djinni idl for an enum</p>
-<div class="highlight"><pre><span></span><code>SomeEnum = enum {
-    Value;
-}
-</code></pre></div>
-<p>transforms per default to the following Java code</p>
-<p><div class="highlight"><pre><span></span><code>public enum SomeEnum {
-    VALUE,
-    ;
-}
-</code></pre></div>
-As you see, <em>VALUE</em> is now in upper case letters.</p>
-<p>If you use <code>--ident-java-enum foo_bar</code> then <em>Value</em> will not be transformed into upper case and the following Java code will be generated.</p>
-<div class="highlight"><pre><span></span><code>public enum SomeEnum {
-    Value,
-    ;
-}
-</code></pre></div>
-<p>This way you can adopt code generation to some extend to your existing coding style.</p>
-<p>The best way to find out how that works is playing around with different values for different identifier options.</p>
-<p><strong>If you wish not text transformation to happen, use the <code>foo_bar</code> style.</strong></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Some identifiers do have text transformation enabled by default.
-Nevertheless make sure to <strong>explicitly set</strong> text transformation styles if you need them! All text transformation may be disabled by default in a future release of the generator.</p>
-</div>
-<h3 id="default-identifier-style-settings">Default Identifier Style settings<a class="headerlink" href="#default-identifier-style-settings" title="Permanent link">&para;</a></h3>
+<p>Possible values: <code>FooBar</code>, <code>fooBar</code>, <code>foo_bar</code>, <code>FOO_BAR</code>, <code>m_fooBar</code>.</p>
 <h4 id="c_1">C++<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1557,6 +1631,119 @@ Nevertheless make sure to <strong>explicitly set</strong> text transformation st
 </tr>
 </tbody>
 </table>
+<h4 id="python_1">Python<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--ident-py-type</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-class-name</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-type-param</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-method</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-field</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-local</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-enum</code></td>
+<td><code>Foo_Bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-const</code></td>
+<td><code>FOO_BAR</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="ccli_1">C++/CLI<a class="headerlink" href="#ccli_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--ident-cppcli-type</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-type-param</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-property</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-method</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-local</code></td>
+<td><code>fooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-enum</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-const</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-file</code></td>
+<td><code>FooBar</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<p>The djinni idl for an enum</p>
+<div class="highlight"><pre><span></span><code>SomeEnum = enum {
+    Value;
+}
+</code></pre></div>
+<p>transforms per default to the following Java code</p>
+<p><div class="highlight"><pre><span></span><code>public enum SomeEnum {
+    VALUE,
+    ;
+}
+</code></pre></div>
+As you see, <em>VALUE</em> is now in upper case letters.</p>
+<p>If you use <code>--ident-java-enum foo_bar</code> then <em>Value</em> will not be transformed into upper case and the following Java code will be generated.</p>
+<div class="highlight"><pre><span></span><code>public enum SomeEnum {
+    Value,
+    ;
+}
+</code></pre></div>
+<p>This way you can adopt code generation to some extend to your existing coding style.</p>
+<p>The best way to find out how that works is playing around with different values for different identifier options.</p>
+<p><strong>If you wish no text transformation to happen, use the <code>foo_bar</code> style.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some identifiers do have text transformation enabled by default.
+Nevertheless make sure to <strong>explicitly set</strong> text transformation styles if you need them! All text transformation may be disabled by default in a future release of the generator.</p>
+</div>
                 
                   
                     
@@ -1565,7 +1752,7 @@ Nevertheless make sure to <strong>explicitly set</strong> text transformation st
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 17, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 23, 2021</span>
     
   </small>
 </div>
@@ -1581,6 +1768,7 @@ Nevertheless make sure to <strong>explicitly set</strong> text transformation st
             </article>
           </div>
         </div>
+        
       </main>
       
         
@@ -1707,10 +1895,10 @@ Nevertheless make sure to <strong>explicitly set</strong> text transformation st
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
     
   </body>
