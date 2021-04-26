@@ -347,6 +347,7 @@
     .tx-container {
       text-align: center;
       padding-top: 1.8rem;
+      padding-bottom: 0.5rem;
       background-color: var(--md-primary-fg-color);
       
       background-repeat: no-repeat;
@@ -417,6 +418,22 @@
     .md-content article h1, .md-content .headerlink, hr:last-of-type, .md-source-date {
       display: none;
     }
+
+    .hero-bottom-image {
+      overflow: hidden;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }
+
+    @media screen and (max-width: 800px) {
+      .hero-bottom-image {
+        margin-right: -280px;
+        margin-left: -100px
+      }
+    }
   </style>
 
   <!-- Hero for landing page -->
@@ -457,7 +474,7 @@
       </div>
     </div>
   </section>
-  <img src="assets/hero_background_new.svg" />
+  <img class="hero-bottom-image" src="assets/hero_background_new.svg" />
 
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
@@ -537,8 +554,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calls-out-of-c" class="md-nav__link">
-    Calls out of C++
+  <a href="#blurs-the-line-between-languages" class="md-nav__link">
+    Blurs the Line Between Languages
   </a>
   
 </li>
@@ -1013,8 +1030,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calls-out-of-c" class="md-nav__link">
-    Calls out of C++
+  <a href="#blurs-the-line-between-languages" class="md-nav__link">
+    Blurs the Line Between Languages
   </a>
   
 </li>
@@ -1056,7 +1073,7 @@
 <h2 id="ide-integration"><img alt="🔌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f50c.svg" title=":electric_plug:" /> IDE Integration<a class="headerlink" href="#ide-integration" title="Permanent link">&para;</a></h2>
 <p>Plugins for Djinni are available for <a href="djinni-intellij-plugin/"><strong>IntelliJ IDEA</strong></a> &amp; <a href="vscode-djinni/"><strong>VS Code</strong></a></p>
 <hr />
-<h2 id="calls-out-of-c"><img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> Calls out of C++<a class="headerlink" href="#calls-out-of-c" title="Permanent link">&para;</a></h2>
+<h2 id="blurs-the-line-between-languages"><img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> Blurs the Line Between Languages<a class="headerlink" href="#blurs-the-line-between-languages" title="Permanent link">&para;</a></h2>
 <p>With Djinni you can implement interfaces in any target language and call the implementation from C++!</p>
 <hr />
 <h2 id="can-target-any-operating-system"><img alt="💥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4a5.svg" title=":boom:" /> Can Target any Operating System<a class="headerlink" href="#can-target-any-operating-system" title="Permanent link">&para;</a></h2>
@@ -1077,7 +1094,7 @@ Since June 2020 it is independently maintained by a small group of individuals f
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 26, 2021</span>
     
   </small>
 </div>
